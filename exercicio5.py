@@ -1,16 +1,16 @@
 #utilização do input 
 
-'''nome = input ("digite seu nome: ")
+nome = input ("digite seu nome: ")
 print(nome)
 
 idade = input("digite sua idade: ")
-print(type(idade))'''
+print(type(idade))
 
 
-'''salario = int(input('salario?: '))
+salario = int(input('salario?: '))
 imposto = float(input("digite o imposto: "))
 total = salario + imposto 
-print(total)'''
+print(total)
 
 
 '''str = string 
