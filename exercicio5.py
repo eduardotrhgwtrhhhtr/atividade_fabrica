@@ -28,4 +28,4 @@ str + %s'''
 a = 100
 b = 200
 c = "eduardo"
-print ("o valor de a é %d, e o valor de b é %.2f "% (a,b))
+print ("o valor de a é %d, e o valor de b é %.1f e o seu nome é: %s " % (a,b,c))
