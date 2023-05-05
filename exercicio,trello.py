@@ -1,0 +1,1 @@
+print("digite o 2 número: ")
