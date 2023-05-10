@@ -1,1 +1,2 @@
-print("digite o 2 número: ")
+
+b=int(input("digite outro número:"))
