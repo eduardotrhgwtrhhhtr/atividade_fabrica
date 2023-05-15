@@ -1,4 +1,4 @@
-'''#vetor - lista
+#vetor - lista
 
 a = [10,20,30,40]
 print(a)
@@ -99,5 +99,5 @@ print(a.count(4))
 #o pop remove quem estiver dentro do parentese,se nao tiver nada remove o ultimo
 a=[1,2,3,4]
 a.pop()
-print(a)'''
+print(a)
 
