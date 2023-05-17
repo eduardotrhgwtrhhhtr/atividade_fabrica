@@ -9,6 +9,14 @@ b2=float(input("valor do segundo produto: "))
 c3=float(input("valor do terceiro produto: "))
 
 barato=[a1,b2,c3]
-print(min(barato))
-barato1=[a,b,c]
-print(min(barato1))
+bestbar=min(barato)
+
+
+if bestbar==a1:
+    print(a,a1)
+elif bestbar==b2:
+    print(b,b2)
+elif bestbar==c3:
+    print(c,c3)
+else:
+    print("ERRO. Existem numeros iguais!")
