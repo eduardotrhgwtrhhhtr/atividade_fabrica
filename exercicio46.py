@@ -4,4 +4,4 @@ while True:
         print("valor correto")
     else:
         print("valor para sair")
-        break
+        break #para parar o programa

@@ -6,3 +6,5 @@ if a==b :  # se o numero a, for igual ao numero b
 else: # se nao for
     print("O quadrado é imperfeito!") # vai ler que o quadrado é imperfeito
 print("Obrigado!!!!!") #obrigado
+
+
