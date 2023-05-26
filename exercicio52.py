@@ -1,5 +1,7 @@
-n1=int(input("numero: "))
-n2=int(input("numero: "))
-for x in range(n1,(n2+1)):
-    print(x)
-    #mandei contar de um numero até outro
+a=int(input("Digite um número, o início: ")) #Pede o começo.
+b=int(input("Digite outro número, o final: ")) #Pede o fim.
+soma=[]
+for c in range(a+1,b): #Gera os números que estão entre a e b.
+    print(c)
+    soma.append(c) #Adiciona os números em uma lista.
+print("Soma dos números que estão no meio:",sum(soma)) #Printa a soma dos elementos da lista.
