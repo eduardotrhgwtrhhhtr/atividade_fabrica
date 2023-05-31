@@ -1,5 +1,6 @@
-print("TABELA DE PREÇOS: ")
-valor=0.18
-for a in range(1,51):
-    print("{:d}- R$ {:.2f}".format(a,valor))
-    valor=valor+0.18
+print("Panificadora Pão de Ontem - Tabela de Preços")
+value=float(input("Digite o preço do pão: ")) #Lê o valor do pão
+soma=value
+for i in range(1,51): #Numera e soma o valor do pão por quantidade.
+    print("{:d}- R$ {:.2f}".format(i,soma))
+    soma=soma+value
