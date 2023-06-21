@@ -1,8 +1,6 @@
 import os
-def somaimposto(a,b):
-    custo=a
-    imposto=b/100
-    finalcusto=custo+(custo*imposto)
+def somaimposto(custo,imposto):
+    finalcusto=custo+(custo*imposto)/100
     return finalcusto
 while True:
     try:
@@ -17,5 +15,5 @@ while True:
         os.system("cls")
         break
 valor=somaimposto(a,b)
-print("o custo final será: {:.2f}R$.".format(valor))
+print("o custo final será: R$ {:.2f}.".format(valor))
 #imprime um produto com uma taxa de imposto informada.
