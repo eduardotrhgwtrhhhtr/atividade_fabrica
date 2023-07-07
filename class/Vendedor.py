@@ -7,4 +7,6 @@ class Vendedor():
 #sempre que tivermos o self, significa que são caracteristicas da classe.
 #caso nao seja definido o self, a variavel ficara apenas dentro da função.
 vendedor1=Vendedor('Ederson',1000)
-print(vendedor1.nome)
+print("nome do vendedor: ",vendedor1.nome)
+vendas1=Vendedor("Ederson",1000)
+print("número de vendas: ",vendas1.vendas)
