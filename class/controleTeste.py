@@ -8,9 +8,13 @@ while escolha != 0:
         print("2-desligar")
         print("3-aumentar volume")
         print("4-diminuir o volume")
+        print("5-netflix")
         escolha=int(input("digite: "))
         escolha2= controle(escolha)
     except:
         print("valor invalido, digite somente numeros inteiros.")
+    if escolha == 5:
+        escolha2.netflix()
+
     os.system("pause")
     os.system("cls")

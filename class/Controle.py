@@ -11,3 +11,6 @@ class controle():
             print("voce diminiu o volume.")
         elif buttons==0:
             print("voce saiu.")
+    def netflix(self):
+        if self.buttons==5:
+            print("voce entrou na netflix.")
