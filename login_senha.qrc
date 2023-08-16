@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="stuart">
+    <file>ninja.jpg</file>
+  </qresource>
+</RCC>
