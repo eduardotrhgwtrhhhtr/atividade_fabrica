@@ -40,7 +40,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     # estilo fusion
-    #app.setStyle("Fusion")
+    app.setStyle("Fusion")
 
     window = MainWindow()
     window.show()
