@@ -30,15 +30,9 @@ class MainWindow(QMainWindow):
         self.result_label.setGeometry(10,180,280,30)
         self.button =QPushButton("Média",self)
         self.button.setGeometry(190,200,100,70)
-        self.button.clicked.connect(self.media)
+    
         
-    def media(self):
-        n1 = float(self.input1.text())
-        n2 = float(self.input2.text())
-        n3 = float(self.input3.text())
-        n4 = float(self.input4.text())
-        soma =(n1 + n2 + n3 + n4)/4
-        self.result_label.setText(f"A média é {soma}")
+
 app = QApplication(sys.argv)
 janela=MainWindow()
 janela.show()
