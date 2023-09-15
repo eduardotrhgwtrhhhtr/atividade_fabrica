@@ -129,7 +129,7 @@ class MarketApp(QMainWindow):
     def finalizar_venda(self):
         # Implemente a finalização da venda e atualização de estoque aqui.
         pass
-
+ 
 def main():
     app = QApplication(sys.argv)
     window = MarketApp()

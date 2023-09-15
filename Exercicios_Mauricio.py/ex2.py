@@ -1,27 +1,27 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 
-class Employee:
-    def __init__(self, name, hours_worked, hourly_rate):
-        self.name = name
-        self.hours_worked = hours_worked
-        self.hourly_rate = hourly_rate
+class Funcionario:
+    def __init__(self, nome, hora_trabalho, valor_hora):
+        self.nome = nome
+        self.hora_trabalho = hora_trabalho
+        self.valor_hora = valor_hora
 
-class OutsourcedEmployee(Employee):
-    def __init__(self, name, hours_worked, hourly_rate, additional_expense):
-        super().__init__(name, hours_worked, hourly_rate)
-        self.additional_expense = additional_expense
+class FuncionarioTerceirizado(Funcionario):
+    def __init__(self, nome, hora_trabalho, valor_hora, despesa_adicional):
+        super().__init__(nome, hora_trabalho, valor_hora)
+        self.despesa_adicional = despesa_adicional
 
-def calculate_payment(employee):
-    if isinstance(employee, OutsourcedEmployee):
-        return (employee.hourly_rate * employee.hours_worked) + (1.10 * employee.additional_expense)
+def Calcular_pagamento(Funcionario):
+    if isinstance(Funcionario, FuncionarioTerceirizado):
+        return (Funcionario.valor_hora * Funcionario.hora_trabalho) + (1.10 * Funcionario.despesa_adicional)
     else:
-        return employee.hourly_rate * employee.hours_worked
+        return (Funcionario.valor_hora * Funcionario.hora_trabalho)
 
-class PayrollApp(QMainWindow):
+class FolhaPagamento(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Payroll App")
+        self.setWindowTitle("Folha de Pagamento")
         self.setGeometry(100, 100, 400, 300)
 
         self.central_widget = QWidget(self)
@@ -29,14 +29,13 @@ class PayrollApp(QMainWindow):
 
         self.layout = QVBoxLayout()
 
-        self.label = QLabel("Enter number of employees:")
-        self.layout.addWidget(self.label)
+        self.funcionario_label = QLabel("Insira o número de funcionários:")
+        self.layout.addWidget(self.funcionario_label)
+        self.input_funcionario = QLineEdit()
+        self.layout.addWidget(self.input_funcionario)
 
-        self.input_field = QLineEdit()
-        self.layout.addWidget(self.input_field)
-
-        self.button = QPushButton("Submit")
-        self.button.clicked.connect(self.process_employees)
+        self.button = QPushButton("Enviar")
+        self.button.clicked.connect(self.FuncionariodoProcesso)
         self.layout.addWidget(self.button)
 
         self.result_label = QLabel("")
@@ -44,37 +43,38 @@ class PayrollApp(QMainWindow):
 
         self.central_widget.setLayout(self.layout)
 
-    def process_employees(self):
+    def FuncionariodoProcesso(self):
         try:
-            num_employees = int(self.input_field.text())
-            employees = []
+            num_funcionarios = int(self.input_funcionario.text())
+            Funcionario = []
 
-            for _ in range(num_employees):
-                employee_type = input("Employee type (1 for regular, 2 for outsourced): ")
-                name = input("Name: ")
-                hours_worked = float(input("Hours worked: "))
-                hourly_rate = float(input("Hourly rate: "))
+            for _ in range(num_funcionarios):
+                tipo_funcionario = input("Tipo de Funcionário (1 para regular, 2 for terceirizado): ")
+                nome = input("Nome: ")
+                hora_trabalho = float(input("Horas Trabalhadas: "))
+                valor_hora = float(input("Valor por hora: "))
                 
-                if employee_type == '2':
-                    additional_expense = float(input("Additional expense: "))
-                    employee = OutsourcedEmployee(name, hours_worked, hourly_rate, additional_expense)
+                if tipo_funcionario == '2':
+                    despesa_adicional = float(input("Despesas adicionais  "))
+                    Funcionario = FuncionarioTerceirizado(nome, hora_trabalho, valor_hora, despesa_adicional)
                 else:
-                    employee = Employee(name, hours_worked, hourly_rate)
+                    Funcionario = Funcionario(nome, hora_trabalho, valor_hora )
                 
-                employees.append(employee)
+                    funcionario.append(_)
             
-            payment_details = []
-            for employee in employees:
-                payment = calculate_payment(employee)
-                payment_details.append(f"Name: {employee.name}, Payment: ${payment:.2f}")
+            detalhes_pagamento = []
+            for funcionario in _:
+                pagamento = Calcular_pagamento(funcionario)
+                detalhes_pagamento.append(f"Nome: {Funcionario.nome}, Pagamento: ${pagamento:.2f}")
 
-            self.result_label.setText("\n".join(payment_details))
+            self.result_label.setText("\n".join(detalhes_pagamento))
 
         except ValueError:
-            self.result_label.setText("Invalid input. Please enter numeric values.")
+            self.result_label.setText("Digito Inválido. Insira números válidos.")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = PayrollApp()
+    window = FolhaPagamento()
     window.show()
     sys.exit(app.exec_())
+
