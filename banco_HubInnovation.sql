@@ -43,10 +43,10 @@ select * from palestra;
 select * from usuario;
 insert into palestra  (desc_palestra,nome_palestra,id_sala,id_palestrante,nome_palestrante,vagas) values
 ('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1),
-('fjjhg','palestra',1,1,'dieguin',1)
+('fjjhg','palestra',1,1,'pontes',2),
+('fjjhg','palestra',1,1,'chris',3),
+('fjjhg','palestra',1,1,'gleiton',4),
+('fjjhg','palestra',1,1,'graveto',5),
+('fjjhg','palestra',1,1,'vinicin',6),
+('fjjhg','palestra',1,1,'fofinho',7)
 ;
