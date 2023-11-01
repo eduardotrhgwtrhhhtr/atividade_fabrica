@@ -50,6 +50,7 @@ insert into usuario  (nome,email,fone,cpf,data_nasc,sexo,id_palestra)values
 ;
 
 show tables;
+select * from usuario;
 
 delimiter $
 create trigger Trg_HubInnovation_insert after insert
