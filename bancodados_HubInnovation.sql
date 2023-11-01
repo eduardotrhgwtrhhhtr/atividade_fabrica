@@ -35,7 +35,10 @@ insert into palestra  (desc_palestra,nome_palestra,id_sala,id_palestrante,nome_p
 ('kkkkkkkkkkk','palestra',7,7,'fofinho',7)
 ;
 
-
+insert into usuario  (nome,email,fone,cpf,data_nasc,sexo,id_palestra)values
+('dieguin','@gmail','999','999','2000-11-01','feminino',1);
+select * from palestra;
+drop trigger Trg_HubInnovation_insert;
 insert into usuario  (nome,email,fone,cpf,data_nasc,sexo,id_palestra)values
 ('dieguin','@gmail','999','999','2000-11-01','feminino',1),
 ('pontes','@gmail','999','999','2000-11-01','mascu',2),
@@ -45,6 +48,19 @@ insert into usuario  (nome,email,fone,cpf,data_nasc,sexo,id_palestra)values
 ('vinicin','@gmail','999','999','2000-11-01','mascu',6),
 ('fofinho','@gmail','999','999','2000-11-01','mascu',7)
 ;
+
+show tables;
+
+delimiter $
+create trigger Trg_HubInnovation_insert after insert
+on usuario  
+for each row
+begin
+update palestra set vagas = vagas-1
+where id_palestra = new.id_palestra;
+end$
+
+
 
 
 describe usuario;
