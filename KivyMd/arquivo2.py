@@ -30,13 +30,14 @@ class OutraTela(Screen):
         
         self.add_widget(layout)
         print(self.number)
-
+        
     def change_screen(self, instace):
         self.manager.current = 'menu'
         
     def number_restart(self, intance):
         self.number =random.randint(1,100)
         print(self.number)
+    
         
     def adivinha_number(self, instace):
         try:
