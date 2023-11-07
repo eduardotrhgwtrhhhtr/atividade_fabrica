@@ -7,7 +7,7 @@ class MenuScreen(Screen):
     def __init__(self, **kwargs):
         super(MenuScreen, self).__init__(**kwargs)
         layout = BoxLayout(orientation="vertical")
-        
+         
         button = Button(text="Ir para a outra tela")
         button.bind(on_press=self.change_screen)
         
